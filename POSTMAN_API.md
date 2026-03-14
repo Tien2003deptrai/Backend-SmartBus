@@ -57,7 +57,35 @@ Content-Type: application/json
 
 ---
 
-## 5. Cập nhật profile
+## 5. Quên mật khẩu - Gửi OTP (hoặc gửi lại)
+```
+POST {{baseUrl}}/api/users/forgot-password/send-otp
+Content-Type: application/json
+
+{
+  "email": "user@example.com"
+}
+```
+→ OTP hiệu lực 2 phút. Gọi lại API này để gửi lại mã.
+
+---
+
+## 6. Quên mật khẩu - Đặt lại mật khẩu
+```
+POST {{baseUrl}}/api/users/forgot-password/reset
+Content-Type: application/json
+
+{
+  "otp": "123456",
+  "newPassword": "newpass123",
+  "newPassword_confirm": "newpass123"
+}
+```
+→ Chỉ gửi OTP + mật khẩu mới (không cần email). OTP đúng + chưa hết hạn: đổi mật khẩu thành công. Sai hoặc hết hạn: báo lỗi.
+
+---
+
+## 7. Cập nhật profile
 ```
 PUT {{baseUrl}}/api/users/profile
 Content-Type: application/json
@@ -73,7 +101,7 @@ Authorization: Bearer {{token}}
 
 ---
 
-## 6. Tạo bài post
+## 8. Tạo bài post
 ```
 POST {{baseUrl}}/api/posts
 Content-Type: application/json
@@ -89,7 +117,7 @@ Authorization: Bearer {{token}}
 
 ---
 
-## 7. Sửa bài post
+## 9. Sửa bài post
 ```
 PUT {{baseUrl}}/api/posts/{{postId}}
 Content-Type: application/json
@@ -103,7 +131,7 @@ Authorization: Bearer {{token}}
 
 ---
 
-## 8. Xóa bài post
+## 10. Xóa bài post
 ```
 DELETE {{baseUrl}}/api/posts/{{postId}}
 Authorization: Bearer {{token}}
@@ -111,14 +139,14 @@ Authorization: Bearer {{token}}
 
 ---
 
-## 9. Lấy danh sách post
+## 11. Lấy danh sách post
 ```
 GET {{baseUrl}}/api/posts?page=1&limit=10&search=tin&sort=newest
 ```
 
 ---
 
-## 10. Lấy chi tiết 1 post
+## 12. Lấy chi tiết 1 post
 ```
 GET {{baseUrl}}/api/posts/{{postId}}
 ```

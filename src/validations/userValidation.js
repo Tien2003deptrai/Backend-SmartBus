@@ -21,6 +21,20 @@ const loginRules = [
     body('password').notEmpty().withMessage('Mật khẩu không được để trống'),
 ];
 
+const forgotPasswordSendOtpRules = [
+    body('email').trim().isEmail().withMessage('Email không hợp lệ'),
+];
+
+const forgotPasswordResetRules = [
+    body('otp').isLength({ min: 6, max: 6 }).withMessage('OTP phải có 6 chữ số'),
+    body('newPassword')
+        .isLength({ min: 6 })
+        .withMessage('Mật khẩu mới phải có ít nhất 6 ký tự'),
+    body('newPassword_confirm')
+        .custom((val, { req }) => val === req.body.newPassword)
+        .withMessage('Xác nhận mật khẩu không khớp'),
+];
+
 const updateUserRules = [
     body('full_name').optional().trim(),
     body('email').optional().trim().isEmail().withMessage('Email không hợp lệ'),
@@ -48,6 +62,8 @@ module.exports = {
     registerRules,
     registerVerifyOtpRules,
     loginRules,
+    forgotPasswordSendOtpRules,
+    forgotPasswordResetRules,
     updateUserRules,
     validate,
 };

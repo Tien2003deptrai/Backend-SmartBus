@@ -28,6 +28,24 @@ async function login(req, res) {
     }
 }
 
+async function sendForgotPasswordOtp(req, res) {
+    try {
+        const result = await userService.sendForgotPasswordOtp(req.body.email);
+        res.json({ success: true, ...result });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function resetPasswordWithOtp(req, res) {
+    try {
+        const result = await userService.resetPasswordWithOtp(req.body);
+        res.json({ success: true, ...result });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
 async function updateUser(req, res) {
     try {
         const user = await userService.updateUser(req.user._id, req.body);
@@ -41,5 +59,7 @@ module.exports = {
     register,
     registerVerifyOtp,
     login,
+    sendForgotPasswordOtp,
+    resetPasswordWithOtp,
     updateUser,
 };

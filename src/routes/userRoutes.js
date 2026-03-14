@@ -25,6 +25,20 @@ router.post(
     userController.login
 );
 
+router.post(
+    '/forgot-password/send-otp',
+    userValidation.forgotPasswordSendOtpRules,
+    userValidation.validate,
+    userController.sendForgotPasswordOtp
+);
+
+router.post(
+    '/forgot-password/reset',
+    userValidation.forgotPasswordResetRules,
+    userValidation.validate,
+    userController.resetPasswordWithOtp
+);
+
 router.put(
     '/profile',
     auth,
