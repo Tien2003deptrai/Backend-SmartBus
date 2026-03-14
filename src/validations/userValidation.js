@@ -1,0 +1,53 @@
+const { body, param, validationResult } = require('express-validator');
+
+const registerRules = [
+    body('full_name').trim().notEmpty().withMessage('Họ tên không được để trống'),
+    body('email').trim().isEmail().withMessage('Email không hợp lệ'),
+    body('phone').trim().notEmpty().withMessage('Số điện thoại không được để trống'),
+    body('password')
+        .isLength({ min: 6 })
+        .withMessage('Mật khẩu phải có ít nhất 6 ký tự'),
+    body('password_confirm')
+        .custom((val, { req }) => val === req.body.password)
+        .withMessage('Xác nhận mật khẩu không khớp'),
+];
+
+const registerVerifyOtpRules = [
+    body('otp').isLength({ min: 6, max: 6 }).withMessage('OTP phải có 6 chữ số'),
+];
+
+const loginRules = [
+    body('email').trim().isEmail().withMessage('Email không hợp lệ'),
+    body('password').notEmpty().withMessage('Mật khẩu không được để trống'),
+];
+
+const updateUserRules = [
+    body('full_name').optional().trim(),
+    body('email').optional().trim().isEmail().withMessage('Email không hợp lệ'),
+    body('phone').optional().trim(),
+    body('gender').optional().trim(),
+    body('date_of_birth').optional().toDate(),
+    body('occupation').optional().trim(),
+    body('province').optional().trim(),
+    body('district').optional().trim(),
+    body('ward').optional().trim(),
+    body('address_detail').optional().trim(),
+    body('is_priority_user').optional().isBoolean(),
+    body('password').optional().isLength({ min: 6 }).withMessage('Mật khẩu phải có ít nhất 6 ký tự'),
+];
+
+function validate(req, res, next) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ success: false, errors: errors.array() });
+    }
+    next();
+}
+
+module.exports = {
+    registerRules,
+    registerVerifyOtpRules,
+    loginRules,
+    updateUserRules,
+    validate,
+};
