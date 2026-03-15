@@ -1,0 +1,61 @@
+const routeService = require('../services/routeService');
+
+async function createRoute(req, res) {
+    try {
+        const route = await routeService.createRoute(req.user._id, req.body);
+        res.status(201).json({ success: true, route });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function updateRoute(req, res) {
+    try {
+        const route = await routeService.updateRoute(req.params.id, req.user._id, req.body);
+        res.json({ success: true, route });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function deleteRoute(req, res) {
+    try {
+        await routeService.deleteRoute(req.params.id, req.user._id);
+        res.json({ success: true, message: 'Đã xóa tuyến' });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function listRoutes(req, res) {
+    try {
+        const { page, limit, search, sort, userId } = req.body;
+        const result = await routeService.listRoutes({
+            page: Number(page) || 1,
+            limit: Number(limit) || 10,
+            search,
+            sort: sort || 'newest',
+            userId: userId || req.user?._id,
+        });
+        res.json({ success: true, ...result });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+}
+
+async function getRouteDetail(req, res) {
+    try {
+        const route = await routeService.getRouteById(req.params.id);
+        res.json({ success: true, route });
+    } catch (err) {
+        res.status(404).json({ success: false, message: err.message });
+    }
+}
+
+module.exports = {
+    createRoute,
+    updateRoute,
+    deleteRoute,
+    listRoutes,
+    getRouteDetail,
+};

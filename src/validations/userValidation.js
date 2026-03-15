@@ -46,7 +46,9 @@ const updateUserRules = [
     body('district').optional().trim(),
     body('ward').optional().trim(),
     body('address_detail').optional().trim(),
-    body('is_priority_user').optional().isBoolean(),
+    body('priority_user').optional().trim(),
+    // bắt buộc phải là ảnh url
+    body('image_proof').optional().trim().isURL().withMessage('Ảnh phải là URL'),
     body('password').optional().isLength({ min: 6 }).withMessage('Mật khẩu phải có ít nhất 6 ký tự'),
 ];
 

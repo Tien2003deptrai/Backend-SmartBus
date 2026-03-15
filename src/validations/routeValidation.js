@@ -1,0 +1,63 @@
+const { body, param, validationResult } = require('express-validator');
+
+const createRouteRules = [
+    body('code').trim().notEmpty().withMessage('Mã tuyến không được để trống'),
+    body('name').trim().notEmpty().withMessage('Tên tuyến không được để trống'),
+    body('description').optional().trim(),
+    body('isHot').optional().isBoolean(),
+    body('turnOnDay').optional().isInt({ min: 0, max: 7 }),
+    body('startName').optional().trim(),
+    body('endName').optional().trim(),
+    body('stopsCount').optional().isInt({ min: 0 }),
+    body('stops')
+        .optional()
+        .isArray()
+        .withMessage('stops phải là mảng'),
+    body('stops.*.stopId').optional().trim(),
+    body('stops.*.name').optional().trim(),
+    body('stops.*.location').optional(),
+    body('stops.*.location.type').optional().isIn(['Point']),
+    body('stops.*.location.coordinates').optional().isArray(),
+    body('stops.*.times').optional().isArray(),
+];
+
+const updateRouteRules = [
+    body('code').optional().trim().notEmpty().withMessage('Mã tuyến không được để trống'),
+    body('name').optional().trim().notEmpty().withMessage('Tên tuyến không được để trống'),
+    body('description').optional().trim(),
+    body('isHot').optional().isBoolean(),
+    body('turnOnDay').optional().isInt({ min: 0, max: 7 }),
+    body('startName').optional().trim(),
+    body('endName').optional().trim(),
+    body('stops').optional().isArray(),
+    body('stops.*.stopId').optional().trim(),
+    body('stops.*.name').optional().trim(),
+    body('stops.*.location').optional(),
+    body('stops.*.times').optional().isArray(),
+];
+
+const listRouteRules = [
+    body('page').optional().toInt().isInt({ min: 1 }).withMessage('page phải là số nguyên dương'),
+    body('limit').optional().toInt().isInt({ min: 1, max: 100 }).withMessage('limit từ 1-100'),
+    body('search').optional().trim(),
+    body('sort').optional().isIn(['newest', 'oldest']).withMessage('sort phải là newest hoặc oldest'),
+    body('userId').optional().isMongoId().withMessage('userId không hợp lệ'),
+];
+
+const idParamRule = param('id').isMongoId().withMessage('ID không hợp lệ');
+
+function validate(req, res, next) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ success: false, errors: errors.array() });
+    }
+    next();
+}
+
+module.exports = {
+    createRouteRules,
+    updateRouteRules,
+    listRouteRules,
+    idParamRule,
+    validate,
+};
