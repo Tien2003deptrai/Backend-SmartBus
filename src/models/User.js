@@ -14,9 +14,11 @@ const userSchema = new mongoose.Schema(
         district: { type: String, default: '' },
         ward: { type: String, default: '' },
         address_detail: { type: String, default: '' },
+        is_priority_user: { type: Boolean, default: false },
         priority_user: { type: String, default: '' },
         image_proof: { type: String, default: '' },
-        role: { type: String, enum: ['admin', 'moderator', 'user'], default: 'user' },
+        role: { type: String, enum: ['admin', 'staff', 'user'], default: 'user' },
+        active: { type: Boolean, default: true },
     },
     { timestamps: true }
 );
@@ -24,6 +26,9 @@ const userSchema = new mongoose.Schema(
 userSchema.index({ email: 1 }, { unique: true });
 userSchema.index({ phone: 1 });
 userSchema.index({ is_priority_user: 1 });
+userSchema.index({ role: 1 });
+userSchema.index({ active: 1 });
+userSchema.index({ full_name: 'text' });
 
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) return next();
