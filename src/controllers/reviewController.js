@@ -1,0 +1,61 @@
+const reviewService = require('../services/reviewService');
+
+async function createReview(req, res) {
+    try {
+        const review = await reviewService.createReview(req.user._id, req.body);
+        res.status(201).json({ success: true, review });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function updateReview(req, res) {
+    try {
+        const review = await reviewService.updateReview(req.params.id, req.user._id, req.body);
+        res.json({ success: true, review });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function deleteReview(req, res) {
+    try {
+        await reviewService.deleteReview(req.params.id, req.user._id);
+        res.json({ success: true, message: 'Đã xóa đánh giá' });
+    } catch (err) {
+        res.status(400).json({ success: false, message: err.message });
+    }
+}
+
+async function listReviews(req, res) {
+    try {
+        const { page, limit, rating, sort, routeId } = req.body;
+        const result = await reviewService.listReviews({
+            page: Number(page) || 1,
+            limit: Number(limit) || 10,
+            rating: rating != null ? rating : undefined,
+            sort: sort || 'newest',
+            routeId: routeId || undefined,
+        });
+        res.json({ success: true, ...result });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
+    }
+}
+
+async function getReviewDetail(req, res) {
+    try {
+        const review = await reviewService.getReviewById(req.params.id);
+        res.json({ success: true, review });
+    } catch (err) {
+        res.status(404).json({ success: false, message: err.message });
+    }
+}
+
+module.exports = {
+    createReview,
+    updateReview,
+    deleteReview,
+    listReviews,
+    getReviewDetail,
+};
