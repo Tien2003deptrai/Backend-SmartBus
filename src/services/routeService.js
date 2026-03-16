@@ -7,7 +7,7 @@ async function createRoute(userId, data) {
     }
     if (userId) payload.userId = userId;
     const route = await Route.create(payload);
-    return route.populate('userId', 'full_name email');
+    return route;
 }
 
 async function updateRoute(routeId, userId, data) {
@@ -19,7 +19,7 @@ async function updateRoute(routeId, userId, data) {
         route.stopsCount = allowed.stops.length;
     }
     await route.save();
-    return route.populate('userId', 'full_name email');
+    return route;
 }
 
 async function deleteRoute(routeId, userId) {
@@ -46,7 +46,7 @@ async function listRoutes({ page = 1, limit = 10, search, sort = 'newest', userI
     const skip = (page - 1) * limit;
 
     const [routes, total] = await Promise.all([
-        Route.find(query).sort(sortOpt).skip(skip).limit(limit).populate('userId', 'full_name email'),
+        Route.find(query).sort(sortOpt).skip(skip).limit(limit).populate('userId', 'full_name email').populate('staffId', 'full_name email'),
         Route.countDocuments(query),
     ]);
 
@@ -62,7 +62,7 @@ async function listRoutes({ page = 1, limit = 10, search, sort = 'newest', userI
 }
 
 async function getRouteById(routeId) {
-    const route = await Route.findById(routeId).populate('userId', 'full_name email');
+    const route = await Route.findById(routeId).populate('userId', 'full_name email').populate('staffId', 'full_name email');
     if (!route) throw new Error('Tuyến không tồn tại');
     return route;
 }

@@ -31,7 +31,8 @@ const routeSchema = new mongoose.Schema(
         endName: { type: String },
         stopsCount: { type: Number, default: 0 },
         stops: [stopSchema],
-        userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // người tạo tuyến
+        staffId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // người phụ trách tuyến
     },
     { timestamps: true }
 );
@@ -39,6 +40,7 @@ const routeSchema = new mongoose.Schema(
 routeSchema.index({ 'stops.location': '2dsphere' });
 routeSchema.index({ code: 1 });
 routeSchema.index({ userId: 1 });
+routeSchema.index({ staffId: 1 });
 routeSchema.index({ name: 'text', description: 'text', startName: 'text', endName: 'text' });
 
 module.exports = mongoose.model('Route', routeSchema);

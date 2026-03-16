@@ -19,6 +19,7 @@ const createRouteRules = [
     body('stops.*.location.type').optional().isIn(['Point']),
     body('stops.*.location.coordinates').optional().isArray(),
     body('stops.*.times').optional().isArray(),
+    body('staffId').optional().isMongoId().withMessage('staffId không hợp lệ'),
 ];
 
 const updateRouteRules = [
@@ -34,6 +35,7 @@ const updateRouteRules = [
     body('stops.*.name').optional().trim(),
     body('stops.*.location').optional(),
     body('stops.*.times').optional().isArray(),
+    body('staffId').optional().isMongoId().withMessage('staffId không hợp lệ'),
 ];
 
 const listRouteRules = [
