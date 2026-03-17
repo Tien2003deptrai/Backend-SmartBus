@@ -9,16 +9,8 @@ const createRouteRules = [
     body('startName').optional().trim(),
     body('endName').optional().trim(),
     body('stopsCount').optional().isInt({ min: 0 }),
-    body('stops')
-        .optional()
-        .isArray()
-        .withMessage('stops phải là mảng'),
-    body('stops.*.stopId').optional().trim(),
-    body('stops.*.name').optional().trim(),
-    body('stops.*.location').optional(),
-    body('stops.*.location.type').optional().isIn(['Point']),
-    body('stops.*.location.coordinates').optional().isArray(),
-    body('stops.*.times').optional().isArray(),
+    body('stops').optional().isArray().withMessage('stops phải là mảng'),
+    body('stops.*').optional().isMongoId().withMessage('Mỗi phần tử stops phải là ObjectId'),
     body('staffId').optional().isMongoId().withMessage('staffId không hợp lệ'),
 ];
 
@@ -30,11 +22,8 @@ const updateRouteRules = [
     body('turnOnDay').optional().isInt({ min: 0, max: 7 }),
     body('startName').optional().trim(),
     body('endName').optional().trim(),
-    body('stops').optional().isArray(),
-    body('stops.*.stopId').optional().trim(),
-    body('stops.*.name').optional().trim(),
-    body('stops.*.location').optional(),
-    body('stops.*.times').optional().isArray(),
+    body('stops').optional().isArray().withMessage('stops phải là mảng'),
+    body('stops.*').optional().isMongoId().withMessage('Mỗi phần tử stops phải là ObjectId'),
     body('staffId').optional().isMongoId().withMessage('staffId không hợp lệ'),
 ];
 

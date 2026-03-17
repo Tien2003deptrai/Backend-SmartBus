@@ -1,0 +1,72 @@
+[
+    {
+        "_id": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "code": "03",
+        "name": "Tuyến 3",
+        "description": "Đi qua Bến xe buýt sân bay; Ga quốc tế sân bay Đà Nẵng; Ga quốc nội sân bay Đà Nẵng; Đối diện 90 Nguyễn Tri Phương; Cầu đi bộ Nguyễn Tri Phương; 130 Điện Biên Phủ; Số 334-336 Điện Biên Phủ; Số 412 Điện Biên Phủ; Số 568 Điện Biên Phủ; 128 Tôn Đức Thắng; Số 210 Tôn Đức Thắng; 12 Hoàng Văn Thái; Bệnh viện Đa khoa Nam Liên Chiểu Hoàng Văn Thái; 294 Hoàng Văn Thái; Kế đình làng Đại La; Đối diện cổng chào thôn Trước Đông; Kế ngã 3 sân golf Bà Nà; Bãi đỗ xe KDL Bà Nà Hills",
+        "isHot": false,
+        "turnOnDay": 3,
+        "startName": "Trạm xe buýt Sân bay",
+        "endName": "Bãi đỗ xe KDL Bà Nà Hills",
+        "userId": "69b63cc2516703b4d873ad40",
+        "staffId": "69b63e79a603d074c65018a0"
+    },
+    {
+        "_id": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "code": "05",
+        "name": "Tuyến 5",
+        "description": "Đi qua Chung cư Hoà Hiệp Nam; Đối diện bảng cấm tắm biển Nguyễn Tất thành; Đối diện nhà hàng Japan Nguyễn Tất Thành; Đối diện 136 Phan Văn Định; Số 421 Nguyễn Lương Bằng; Số 339 Nguyễn Lương Bằng; 755-757 Tôn Đức Thắng; Đối diện 49 Ngô Thì Nhậm; Đối diện 316 Hồ Tùng Mậu; Kế trụ 504 Hồ Tùng Mậu; Đối diện 92 Phùng Hưng; Chung cư khu CT Kinh Dương Vương; 35-37 Kinh Dương Vương; Bệnh viện Da liễu Dũng Sĩ Thanh Khê; 44 Dũng Sĩ Thanh Khê; Đối diện Đại học TDTT Dũng Sĩ Thanh Khê; Trường THPT Thái Phiên Trần Cao Vân; Số 583 Trần Cao Vân; Số 301 Trần Cao Vân; Số 189 Trần Cao Vân; Đối diện 160 Trần Cao Vân; Đối diện 120 - Bệnh viện Đa khoa Quang Trung; 126 Lê Lợi; Số 154 Lê Lợi; 07 Lê Duẩn; Kế bùng binh cầu sông Hàn Phạm Văn Đồng; Số 124 Vian Hotel Phạm Văn Đồng; Đối diện sân bóng đá Harmony Phạm Văn Đồng; Công viên Biển Đông Võ Nguyên Giáp",
+        "isHot": false,
+        "turnOnDay": 3,
+        "startName": "Chung cư Hoà Hiệp Nam",
+        "endName": "Công viên Biển Đông",
+        "userId": "69b63cc2516703b4d873ad40",
+        "staffId": "69b63e79a603d074c65018a0"
+    },
+    {
+        "_id": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "code": "08",
+        "name": "Tuyến 8",
+        "description": "Đi qua Bến xe Bùi Dương Lịch; Đối diện 32 Trần Thánh Tông; 570 Ngô Quyền; 692 Ngô Quyền; 862 Ngô Quyền; Đối diện 755 Ngô Quyền; Số 926 Ngô Quyền; Trung tâm y tế khu vực Sơn Trà; Đối diện 1187 Ngô Quyền; Số 34 Ngũ Hành Sơn; 178 Ngũ Hành Sơn; 240 Ngũ Hành Sơn; Số 312 Ngũ Hành Sơn; Số 376 Ngũ Hành Sơn; Chùa Bà Đa Hồ Xuân Hương; Khu sân bóng đá Tiên Sơn; Số 52 Xô Viết Nghệ Tĩnh; Đối diện Cục Hải Quan TP Đà Nẵng; 268 Xô Viết Nghệ Tĩnh; Viettronimex Plaza Nguyễn Hữu Thọ; 538 Nguyễn Hữu Thọ; Số 40-42 Lê Đại Hành; Dệt may Hoà Thọ Ông Ích Đường; Số 60 Ông Ích Đường; Số 164 Ông Ích Đường; Kế 52 Phạm Hùng; Số 184 Phạm Hùng; Bến xe buýt Phạm Hùng",
+        "isHot": false,
+        "turnOnDay": 3,
+        "startName": "Vũng Thùng",
+        "endName": "Trạm xe buýt Phạm Hùng",
+        "userId": "69b63cc2516703b4d873ad40",
+        "staffId": "69b63e79a603d074c65018a0"
+    },
+    {
+        "_id": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "code": "11",
+        "name": "Tuyến 11",
+        "description": "Đi qua Bến xe buýt Xuân Diệu; 192 đường 3 tháng 2; 79 Nguyễn Tất Thành; 225 Nguyễn Tất Thành; Số 6 Ông Ích Khiêm; 144 Ông Ích Khiêm; 196 Hải Phòng; Bờ hồ 1 Hàm Nghi; Số 28 - Công Ty Quản Lý Nhà Chung Cư Lê Đình Lý; 114 Lê Đình Lý; Đối diện 159 Lê Đình Lý; Số 38 Nguyễn Hữu Thọ; 134 Nguyễn Hữu Thọ; Cảnh sát PCCC TP Đà Nẵng; Trường THPT Nguyễn Hiền; Số 25 Phan Đăng Lưu; Đối diện công viên Châu Á; Siêu thị Lotte; Chân cầu Tiền sơn (Đối diện sân bóng mini Tiên Sơn); Đối diện chùa Bà Đa Hồ Xuân Hương; Số 158 Lê Văn Hiến; Số 256 Lê Văn Hiến; Số 376 Lê Văn Hiến; Bệnh viện Phụ sản nhi Đà Nẵng",
+        "isHot": true,
+        "turnOnDay": 3,
+        "startName": "Xuân Diệu",
+        "endName": "Bệnh viện Phụ sản nhi",
+        "userId": "69b63cc2516703b4d873ad40",
+        "staffId": "69b63e79a603d074c65018a0"
+    },
+    {
+        "_id": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "code": "16",
+        "name": "Tuyến 16",
+        "description": "Đi qua 171 Nguyễn Văn Cừ;",
+        "isHot": false,
+        "turnOnDay": 3,
+        "startName": "Kim Liên",
+        "endName": "Đại học Việt Hàn",
+        "userId": "69b63cc2516703b4d873ad40",
+        "staffId": "69b63e79a603d074c65018a0"
+    }
+]

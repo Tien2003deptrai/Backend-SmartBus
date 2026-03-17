@@ -1,0 +1,2562 @@
+[
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0301",
+        "order": 1,
+        "name": "Bến xe buýt sân bay",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20555725799204,
+                16.056808306012176
+            ]
+        },
+        "times": [
+            "06:00",
+            "10:00",
+            "14:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0302",
+        "order": 2,
+        "name": "Ga quốc tế sân bay Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20285807309176,
+                16.056845181314976
+            ]
+        },
+        "times": [
+            "06:13",
+            "10:13",
+            "14:13"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0303",
+        "order": 3,
+        "name": "Ga quốc nội sân bay Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20327928570894,
+                16.052930057465336
+            ]
+        },
+        "times": [
+            "06:27",
+            "10:27",
+            "14:27"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0304",
+        "order": 4,
+        "name": "Đối diện 90 Nguyễn Tri Phương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20442879395426,
+                16.062115702783796
+            ]
+        },
+        "times": [
+            "06:40",
+            "10:40",
+            "14:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0305",
+        "order": 5,
+        "name": "Cầu đi bộ Nguyễn Tri Phương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20308513406759,
+                16.064817936309634
+            ]
+        },
+        "times": [
+            "06:53",
+            "10:53",
+            "14:53"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0306",
+        "order": 6,
+        "name": "130 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.19929921921528,
+                16.065807054167994
+            ]
+        },
+        "times": [
+            "07:07",
+            "11:07",
+            "15:07"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0307",
+        "order": 7,
+        "name": "Số 334-336 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.19288023881842,
+                16.065988536148094
+            ]
+        },
+        "times": [
+            "07:20",
+            "11:20",
+            "15:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0308",
+        "order": 8,
+        "name": "Số 412 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.18892122025119,
+                16.066006689422952
+            ]
+        },
+        "times": [
+            "07:33",
+            "11:33",
+            "15:33"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0309",
+        "order": 9,
+        "name": "Số 568 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.18420443521839,
+                16.06561069169991
+            ]
+        },
+        "times": [
+            "07:47",
+            "11:47",
+            "15:47"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0310",
+        "order": 10,
+        "name": "128 Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1744152254145,
+                16.059110790013193
+            ]
+        },
+        "times": [
+            "08:00",
+            "12:00",
+            "16:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0311",
+        "order": 11,
+        "name": "Số 210 Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.17140604643048,
+                16.05690313366753
+            ]
+        },
+        "times": [
+            "08:13",
+            "12:13",
+            "16:13"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0312",
+        "order": 12,
+        "name": "12 Hoàng Văn Thái",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1662351008514,
+                16.05631992624157
+            ]
+        },
+        "times": [
+            "08:27",
+            "12:27",
+            "16:27"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0313",
+        "order": 13,
+        "name": "Bệnh viện Đa khoa Nam Liên Chiểu Hoàng Văn Thái",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.16273395252631,
+                16.05526059842867
+            ]
+        },
+        "times": [
+            "08:40",
+            "12:40",
+            "16:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0314",
+        "order": 14,
+        "name": "294 Hoàng Văn Thái",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.15241477787659,
+                16.05217193999246
+            ]
+        },
+        "times": [
+            "08:53",
+            "12:53",
+            "16:53"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0315",
+        "order": 15,
+        "name": "Kế đình làng Đại La",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.11706222339444,
+                16.03099114061816
+            ]
+        },
+        "times": [
+            "09:07",
+            "13:07",
+            "17:07"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0316",
+        "order": 16,
+        "name": "Đối diện cổng chào thôn Trước Đông",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.10310292419463,
+                16.02209608464549
+            ]
+        },
+        "times": [
+            "09:20",
+            "13:20",
+            "17:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0317",
+        "order": 17,
+        "name": "Kế ngã 3 sân golf Bà Nà",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.05403660305556,
+                16.021395840813994
+            ]
+        },
+        "times": [
+            "09:33",
+            "13:33",
+            "17:33"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "e9bef270894a86c73848c12f"
+        },
+        "stopCode": "0318",
+        "order": 18,
+        "name": "Bãi đỗ xe KDL Bà Nà Hills",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.03623111451351,
+                16.02583057418444
+            ]
+        },
+        "times": [
+            "09:47",
+            "13:47",
+            "17:47"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0501",
+        "order": 1,
+        "name": "Chung cư Hoà Hiệp Nam",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.13279265744556,
+                16.108599658941262
+            ]
+        },
+        "times": [
+            "06:00",
+            "10:07",
+            "14:06"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0502",
+        "order": 2,
+        "name": "Đối diện bảng cấm tắm biển Nguyễn Tất thành",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.13980311453275,
+                16.10123274592277
+            ]
+        },
+        "times": [
+            "06:08",
+            "10:15",
+            "14:14"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0503",
+        "order": 3,
+        "name": "Đối diện nhà hàng Japan Nguyễn Tất Thành",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1460425928004,
+                16.094953037417163
+            ]
+        },
+        "times": [
+            "06:17",
+            "10:23",
+            "14:23"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0504",
+        "order": 4,
+        "name": "Đối diện 136 Phan Văn Định",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14840110857763,
+                16.090866337274907
+            ]
+        },
+        "times": [
+            "06:25",
+            "10:32",
+            "14:31"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0505",
+        "order": 5,
+        "name": "Số 421 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14427559547778,
+                16.086511692878418
+            ]
+        },
+        "times": [
+            "06:33",
+            "10:40",
+            "14:39"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0506",
+        "order": 6,
+        "name": "Số 339 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14566636563099,
+                16.083059839334094
+            ]
+        },
+        "times": [
+            "06:41",
+            "10:48",
+            "14:48"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0507",
+        "order": 7,
+        "name": "755-757 Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1504445254919,
+                16.071464037192293
+            ]
+        },
+        "times": [
+            "06:50",
+            "10:56",
+            "14:56"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0508",
+        "order": 8,
+        "name": "Đối diện 49 Ngô Thì Nhậm",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.15390514427263,
+                16.07036943440974
+            ]
+        },
+        "times": [
+            "06:58",
+            "11:05",
+            "15:05"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0509",
+        "order": 9,
+        "name": "Đối diện 316 Hồ Tùng Mậu",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.15668634044498,
+                16.072411529458055
+            ]
+        },
+        "times": [
+            "07:06",
+            "11:13",
+            "15:13"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0510",
+        "order": 10,
+        "name": "Kế trụ 504 Hồ Tùng Mậu",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.15828380674893,
+                16.074676425662588
+            ]
+        },
+        "times": [
+            "07:14",
+            "11:21",
+            "15:21"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0511",
+        "order": 11,
+        "name": "Đối diện 92 Phùng Hưng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.16661216345054,
+                16.07316046194508
+            ]
+        },
+        "times": [
+            "07:23",
+            "11:30",
+            "15:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0512",
+        "order": 12,
+        "name": "Chung cư khu CT Kinh Dương Vương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1691854075045,
+                16.07488431076741
+            ]
+        },
+        "times": [
+            "07:31",
+            "11:38",
+            "15:38"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0513",
+        "order": 13,
+        "name": "35-37 Kinh Dương Vương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1728973380382,
+                16.07242141292952
+            ]
+        },
+        "times": [
+            "07:39",
+            "11:46",
+            "15:46"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0514",
+        "order": 14,
+        "name": "Bệnh viện Da liễu Dũng Sĩ Thanh Khê",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.17676733301913,
+                16.074066641444105
+            ]
+        },
+        "times": [
+            "07:48",
+            "11:55",
+            "15:55"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0515",
+        "order": 15,
+        "name": "44 Dũng Sĩ Thanh Khê",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.17880303789065,
+                16.07191035663668
+            ]
+        },
+        "times": [
+            "07:56",
+            "12:03",
+            "16:03"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0516",
+        "order": 16,
+        "name": "Đối diện Đại học TDTT Dũng Sĩ Thanh Khê",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.17993540186026,
+                16.070636729495536
+            ]
+        },
+        "times": [
+            "08:04",
+            "12:11",
+            "16:11"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0517",
+        "order": 17,
+        "name": "Trường THPT Thái Phiên Trần Cao Vân",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.18333100825816,
+                16.06846682406385
+            ]
+        },
+        "times": [
+            "08:12",
+            "12:20",
+            "16:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0518",
+        "order": 18,
+        "name": "Số 583 Trần Cao Vân",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.18802792616263,
+                16.07132405733629
+            ]
+        },
+        "times": [
+            "08:21",
+            "12:28",
+            "16:28"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0519",
+        "order": 19,
+        "name": "Số 301 Trần Cao Vân",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1984222516572,
+                16.071032619830927
+            ]
+        },
+        "times": [
+            "08:29",
+            "12:36",
+            "16:36"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0520",
+        "order": 20,
+        "name": "Số 189 Trần Cao Vân",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20203011457731,
+                16.071107662170153
+            ]
+        },
+        "times": [
+            "08:37",
+            "12:44",
+            "16:44"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0521",
+        "order": 21,
+        "name": "Đối diện 160 Trần Cao Vân",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20825210046813,
+                16.07238092609076
+            ]
+        },
+        "times": [
+            "08:46",
+            "12:53",
+            "16:53"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0522",
+        "order": 22,
+        "name": "Đối diện 120 - Bệnh viện Đa khoa Quang Trung",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21693695574113,
+                16.074106277968745
+            ]
+        },
+        "times": [
+            "08:54",
+            "13:01",
+            "17:01"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0523",
+        "order": 23,
+        "name": "126 Lê Lợi",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21994232854985,
+                16.074332325632998
+            ]
+        },
+        "times": [
+            "09:02",
+            "13:09",
+            "17:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0524",
+        "order": 24,
+        "name": "Số 154 Lê Lợi",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22021117983856,
+                16.07215948946844
+            ]
+        },
+        "times": [
+            "09:10",
+            "13:18",
+            "17:18"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0525",
+        "order": 25,
+        "name": "07 Lê Duẩn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22150262594573,
+                16.07139368594041
+            ]
+        },
+        "times": [
+            "09:19",
+            "13:26",
+            "17:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0526",
+        "order": 26,
+        "name": "Kế bùng binh cầu sông Hàn Phạm Văn Đồng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23210768153585,
+                16.07233203909842
+            ]
+        },
+        "times": [
+            "09:27",
+            "13:34",
+            "17:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0527",
+        "order": 27,
+        "name": "Số 124 Vian Hotel Phạm Văn Đồng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23557961988115,
+                16.070868086388167
+            ]
+        },
+        "times": [
+            "09:35",
+            "13:42",
+            "17:42"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0528",
+        "order": 28,
+        "name": "Đối diện sân bóng đá Harmony Phạm Văn Đồng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24048474667107,
+                16.069935185744345
+            ]
+        },
+        "times": [
+            "09:44",
+            "13:51",
+            "17:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "656acfbfafb7e4fc694e3944"
+        },
+        "stopCode": "0529",
+        "order": 29,
+        "name": "Công viên Biển Đông Võ Nguyên Giáp",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2454110568205,
+                16.07340932663387
+            ]
+        },
+        "times": [
+            "09:52",
+            "13:59",
+            "17:59"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0801",
+        "order": 1,
+        "name": "Bến xe Bùi Dương Lịch",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2323481295397,
+                16.08952517130821
+            ]
+        },
+        "times": [
+            "06:00",
+            "10:00",
+            "14:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0802",
+        "order": 2,
+        "name": "Đối diện 32 Trần Thánh Tông",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23611936410964,
+                16.08529497101408
+            ]
+        },
+        "times": [
+            "06:09",
+            "10:09",
+            "14:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0803",
+        "order": 3,
+        "name": "570 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23738156070527,
+                16.083607795065994
+            ]
+        },
+        "times": [
+            "06:17",
+            "10:17",
+            "14:17"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0804",
+        "order": 4,
+        "name": "692 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23508041396464,
+                16.08123582401484
+            ]
+        },
+        "times": [
+            "06:26",
+            "10:26",
+            "14:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0805",
+        "order": 5,
+        "name": "862 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23148450966526,
+                16.077376953648482
+            ]
+        },
+        "times": [
+            "06:34",
+            "10:34",
+            "14:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0806",
+        "order": 6,
+        "name": "Đối diện 755 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23130257660725,
+                16.07010866525782
+            ]
+        },
+        "times": [
+            "06:43",
+            "10:43",
+            "14:43"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0807",
+        "order": 7,
+        "name": "Số 926 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23273358012985,
+                16.066178321625685
+            ]
+        },
+        "times": [
+            "06:51",
+            "10:51",
+            "14:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0808",
+        "order": 8,
+        "name": "Trung tâm y tế khu vực Sơn Trà",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23523961763814,
+                16.057887778618397
+            ]
+        },
+        "times": [
+            "07:00",
+            "11:00",
+            "15:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0809",
+        "order": 9,
+        "name": "Đối diện 1187 Ngô Quyền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23632548633714,
+                16.054295036079008
+            ]
+        },
+        "times": [
+            "07:09",
+            "11:09",
+            "15:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0810",
+        "order": 10,
+        "name": "Số 34 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23698004561321,
+                16.05259153483589
+            ]
+        },
+        "times": [
+            "07:17",
+            "11:17",
+            "15:17"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0811",
+        "order": 11,
+        "name": "178 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23843119123322,
+                16.047716787096608
+            ]
+        },
+        "times": [
+            "07:26",
+            "11:26",
+            "15:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0812",
+        "order": 12,
+        "name": "240 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23921699463885,
+                16.045222914452772
+            ]
+        },
+        "times": [
+            "07:34",
+            "11:34",
+            "15:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0813",
+        "order": 13,
+        "name": "Số 312 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2404945481467,
+                16.04273380045279
+            ]
+        },
+        "times": [
+            "07:43",
+            "11:43",
+            "15:43"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0814",
+        "order": 14,
+        "name": "Số 376 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24168405180693,
+                16.04031331082861
+            ]
+        },
+        "times": [
+            "07:51",
+            "11:51",
+            "15:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0815",
+        "order": 15,
+        "name": "Chùa Bà Đa Hồ Xuân Hương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24154348929783,
+                16.037360203681487
+            ]
+        },
+        "times": [
+            "08:00",
+            "12:00",
+            "16:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0816",
+        "order": 16,
+        "name": "Khu sân bóng đá Tiên Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22806057448675,
+                16.033896355003723
+            ]
+        },
+        "times": [
+            "08:09",
+            "12:09",
+            "16:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0817",
+        "order": 17,
+        "name": "Số 52 Xô Viết Nghệ Tĩnh",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22121401720915,
+                16.03275133395461
+            ]
+        },
+        "times": [
+            "08:17",
+            "12:17",
+            "16:17"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0818",
+        "order": 18,
+        "name": "Đối diện Cục Hải Quan TP Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21572251994182,
+                16.03215381866448
+            ]
+        },
+        "times": [
+            "08:26",
+            "12:26",
+            "16:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0819",
+        "order": 19,
+        "name": "268 Xô Viết Nghệ Tĩnh",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21253531536998,
+                16.031783529150825
+            ]
+        },
+        "times": [
+            "08:34",
+            "12:34",
+            "16:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0820",
+        "order": 20,
+        "name": "Viettronimex Plaza Nguyễn Hữu Thọ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20845228365134,
+                16.030443048225596
+            ]
+        },
+        "times": [
+            "08:43",
+            "12:43",
+            "16:43"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0821",
+        "order": 21,
+        "name": "538 Nguyễn Hữu Thọ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20861149652774,
+                16.028049937455812
+            ]
+        },
+        "times": [
+            "08:51",
+            "12:51",
+            "16:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0822",
+        "order": 22,
+        "name": "Số 40-42 Lê Đại Hành",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2072966705888,
+                16.024330460111653
+            ]
+        },
+        "times": [
+            "09:00",
+            "13:00",
+            "17:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0823",
+        "order": 23,
+        "name": "Dệt may Hoà Thọ Ông Ích Đường",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20314645348707,
+                16.020014677611957
+            ]
+        },
+        "times": [
+            "09:09",
+            "13:09",
+            "17:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0824",
+        "order": 24,
+        "name": "Số 60 Ông Ích Đường",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20487732983302,
+                16.01647655110071
+            ]
+        },
+        "times": [
+            "09:17",
+            "13:17",
+            "17:17"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0825",
+        "order": 25,
+        "name": "Số 164 Ông Ích Đường",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20549413402429,
+                16.012312191481787
+            ]
+        },
+        "times": [
+            "09:26",
+            "13:26",
+            "17:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0826",
+        "order": 26,
+        "name": "Kế 52 Phạm Hùng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20698471007456,
+                16.002984134184857
+            ]
+        },
+        "times": [
+            "09:34",
+            "13:34",
+            "17:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0827",
+        "order": 27,
+        "name": "Số 184 Phạm Hùng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20706197598973,
+                15.99925813773943
+            ]
+        },
+        "times": [
+            "09:43",
+            "13:43",
+            "17:43"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1fab4fe6908ff496a8214353"
+        },
+        "stopCode": "0828",
+        "order": 28,
+        "name": "Bến xe buýt Phạm Hùng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20702334302216,
+                15.99624180399016
+            ]
+        },
+        "times": [
+            "09:51",
+            "13:51",
+            "17:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1101",
+        "order": 1,
+        "name": "Bến xe buýt Xuân Diệu",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22042993190153,
+                16.08674805163924
+            ]
+        },
+        "times": [
+            "06:00",
+            "10:00",
+            "14:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1102",
+        "order": 2,
+        "name": "192 đường 3 tháng 2",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21645046063105,
+                16.086995209018134
+            ]
+        },
+        "times": [
+            "06:10",
+            "10:10",
+            "14:10"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1103",
+        "order": 3,
+        "name": "79 Nguyễn Tất Thành",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21386566390154,
+                16.084467718939166
+            ]
+        },
+        "times": [
+            "06:20",
+            "10:20",
+            "14:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1104",
+        "order": 4,
+        "name": "225 Nguyễn Tất Thành",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21137185631628,
+                16.08067693057298
+            ]
+        },
+        "times": [
+            "06:30",
+            "10:30",
+            "14:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1105",
+        "order": 5,
+        "name": "Số 6 Ông Ích Khiêm",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21166056574742,
+                16.078794395049897
+            ]
+        },
+        "times": [
+            "06:40",
+            "10:40",
+            "14:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1106",
+        "order": 6,
+        "name": "144 Ông Ích Khiêm",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21252622393874,
+                16.074535393916033
+            ]
+        },
+        "times": [
+            "06:50",
+            "10:50",
+            "14:50"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1107",
+        "order": 7,
+        "name": "196 Hải Phòng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2112627324381,
+                16.071369964848653
+            ]
+        },
+        "times": [
+            "07:00",
+            "11:00",
+            "15:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1108",
+        "order": 8,
+        "name": "Bờ hồ 1 Hàm Nghi",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21051837117109,
+                16.06336365317289
+            ]
+        },
+        "times": [
+            "07:10",
+            "11:10",
+            "15:10"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1109",
+        "order": 9,
+        "name": "Số 28 - Công Ty Quản Lý Nhà Chung Cư Lê Đình Lý",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.211275180944,
+                16.05834230346236
+            ]
+        },
+        "times": [
+            "07:20",
+            "11:20",
+            "15:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1110",
+        "order": 10,
+        "name": "114 Lê Đình Lý",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2115887311616,
+                16.05424364687526
+            ]
+        },
+        "times": [
+            "07:30",
+            "11:30",
+            "15:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1111",
+        "order": 11,
+        "name": "Đối diện 159 Lê Đình Lý",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2099391401799,
+                16.0517974156106
+            ]
+        },
+        "times": [
+            "07:40",
+            "11:40",
+            "15:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1112",
+        "order": 12,
+        "name": "Số 38 Nguyễn Hữu Thọ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20926508319043,
+                16.049209024232514
+            ]
+        },
+        "times": [
+            "07:50",
+            "11:50",
+            "15:50"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1113",
+        "order": 13,
+        "name": "134 Nguyễn Hữu Thọ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2097997781958,
+                16.04480567500626
+            ]
+        },
+        "times": [
+            "08:00",
+            "12:00",
+            "16:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1114",
+        "order": 14,
+        "name": "Cảnh sát PCCC TP Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21337892780745,
+                16.035984614158334
+            ]
+        },
+        "times": [
+            "08:10",
+            "12:10",
+            "16:10"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1115",
+        "order": 15,
+        "name": "Trường THPT Nguyễn Hiền",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.21908151317817,
+                16.036825950884655
+            ]
+        },
+        "times": [
+            "08:20",
+            "12:20",
+            "16:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1116",
+        "order": 16,
+        "name": "Số 25 Phan Đăng Lưu",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22271927336394,
+                16.037566642815445
+            ]
+        },
+        "times": [
+            "08:30",
+            "12:30",
+            "16:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1117",
+        "order": 17,
+        "name": "Đối diện công viên Châu Á",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22604447410585,
+                16.037848818044818
+            ]
+        },
+        "times": [
+            "08:40",
+            "12:40",
+            "16:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1118",
+        "order": 18,
+        "name": "Siêu thị Lotte",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22883104139613,
+                16.03468084808562
+            ]
+        },
+        "times": [
+            "08:50",
+            "12:50",
+            "16:50"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1119",
+        "order": 19,
+        "name": "Chân cầu Tiền sơn (Đối diện sân bóng mini Tiên Sơn)",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22769993852596,
+                16.033592136054448
+            ]
+        },
+        "times": [
+            "09:00",
+            "13:00",
+            "17:00"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1120",
+        "order": 20,
+        "name": "Đối diện chùa Bà Đa Hồ Xuân Hương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24186578931784,
+                16.037296907818487
+            ]
+        },
+        "times": [
+            "09:10",
+            "13:10",
+            "17:10"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1121",
+        "order": 21,
+        "name": "Số 158 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2457070278132,
+                16.03253650163937
+            ]
+        },
+        "times": [
+            "09:20",
+            "13:20",
+            "17:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1122",
+        "order": 22,
+        "name": "Số 256 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24725753305722,
+                16.029581775588404
+            ]
+        },
+        "times": [
+            "09:30",
+            "13:30",
+            "17:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1123",
+        "order": 23,
+        "name": "Số 376 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.249464746624,
+                16.025084951585853
+            ]
+        },
+        "times": [
+            "09:40",
+            "13:40",
+            "17:40"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "9ca0b080d9ca8550314cc417"
+        },
+        "stopCode": "1124",
+        "order": 24,
+        "name": "Bệnh viện Phụ sản nhi Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.25071637135406,
+                16.02282314018291
+            ]
+        },
+        "times": [
+            "09:50",
+            "13:50",
+            "17:50"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1601",
+        "order": 1,
+        "name": "171 Nguyễn Văn Cừ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.11955821710077,
+                16.135488824421348
+            ]
+        },
+        "times": [
+            "06:00",
+            "10:07",
+            "14:06"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1602",
+        "order": 2,
+        "name": "Công ty Xi măng Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.11926335086245,
+                16.129635893044423
+            ]
+        },
+        "times": [
+            "06:08",
+            "10:15",
+            "14:14"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1603",
+        "order": 3,
+        "name": "957 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1281416980841,
+                16.11318578986693
+            ]
+        },
+        "times": [
+            "06:17",
+            "10:23",
+            "14:23"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1604",
+        "order": 4,
+        "name": "Đối diện 546 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.13499835332445,
+                16.10055831437573
+            ]
+        },
+        "times": [
+            "06:25",
+            "10:32",
+            "14:31"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1605",
+        "order": 5,
+        "name": "421 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14426481735872,
+                16.086500643512807
+            ]
+        },
+        "times": [
+            "06:33",
+            "10:40",
+            "14:39"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1606",
+        "order": 6,
+        "name": "Bệnh viện tâm thần",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14718072809131,
+                16.079557749326252
+            ]
+        },
+        "times": [
+            "06:41",
+            "10:48",
+            "14:48"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1607",
+        "order": 7,
+        "name": "27 Nguyễn Lương Bằng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.14998694825262,
+                16.0726592587497
+            ]
+        },
+        "times": [
+            "06:50",
+            "10:56",
+            "14:56"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1608",
+        "order": 8,
+        "name": "573 Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.1536773115997,
+                16.066210494917634
+            ]
+        },
+        "times": [
+            "06:58",
+            "11:05",
+            "15:05"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1609",
+        "order": 9,
+        "name": "Đối diện 422A (Công ty Mazda) Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.16290932269244,
+                16.06004358403649
+            ]
+        },
+        "times": [
+            "07:06",
+            "11:13",
+            "15:13"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1610",
+        "order": 10,
+        "name": "341 Tôn Đức Thắng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.16663285793864,
+                16.057222528650172
+            ]
+        },
+        "times": [
+            "07:14",
+            "11:21",
+            "15:21"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1611",
+        "order": 11,
+        "name": "Công ty cổ phần xe khách và dịch vụ thương mại Đà Nẵng",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.17352929638072,
+                16.058158004682667
+            ]
+        },
+        "times": [
+            "07:23",
+            "11:30",
+            "15:30"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1612",
+        "order": 12,
+        "name": "559 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.18454616144093,
+                16.065325203679215
+            ]
+        },
+        "times": [
+            "07:31",
+            "11:38",
+            "15:38"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1613",
+        "order": 13,
+        "name": "311 Điện Biên Phủ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.19263385149304,
+                16.065659996769938
+            ]
+        },
+        "times": [
+            "07:39",
+            "11:46",
+            "15:46"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1614",
+        "order": 14,
+        "name": "Công viên 29/3",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20528424374638,
+                16.065875873144275
+            ]
+        },
+        "times": [
+            "07:48",
+            "11:55",
+            "15:55"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1615",
+        "order": 15,
+        "name": "85 Lý Thái Tổ",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.20818148517498,
+                16.06616987947992
+            ]
+        },
+        "times": [
+            "07:56",
+            "12:03",
+            "16:03"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1616",
+        "order": 16,
+        "name": "335 Hùng Vương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2106190873175,
+                16.066552568350627
+            ]
+        },
+        "times": [
+            "08:04",
+            "12:11",
+            "16:11"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1617",
+        "order": 17,
+        "name": "103 Hùng Vương",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2180545561891,
+                16.06805344712453
+            ]
+        },
+        "times": [
+            "08:12",
+            "12:20",
+            "16:20"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1618",
+        "order": 18,
+        "name": "Đối diện 155 Trần Phú",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22366766537344,
+                16.06704582813938
+            ]
+        },
+        "times": [
+            "08:21",
+            "12:28",
+            "16:28"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1619",
+        "order": 19,
+        "name": "270 Trần Phú",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.22317101135339,
+                16.062009187272317
+            ]
+        },
+        "times": [
+            "08:29",
+            "12:36",
+            "16:36"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1620",
+        "order": 20,
+        "name": "Chân cầu Rồng 2 Võ Văn Kiệt",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23361550897273,
+                16.061232691239038
+            ]
+        },
+        "times": [
+            "08:37",
+            "12:44",
+            "16:44"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1621",
+        "order": 21,
+        "name": "Trung tâm y tế khu vực Sơn Trà",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23522739945213,
+                16.05788267801457
+            ]
+        },
+        "times": [
+            "08:46",
+            "12:53",
+            "16:53"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1622",
+        "order": 22,
+        "name": "178 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.23843277471886,
+                16.047719738403117
+            ]
+        },
+        "times": [
+            "08:54",
+            "13:01",
+            "17:01"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1623",
+        "order": 23,
+        "name": "376 Ngũ Hành Sơn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24168938170224,
+                16.04031364484041
+            ]
+        },
+        "times": [
+            "09:02",
+            "13:09",
+            "17:09"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1624",
+        "order": 24,
+        "name": "158 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24570337054377,
+                16.032536327445953
+            ]
+        },
+        "times": [
+            "09:10",
+            "13:18",
+            "17:18"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1625",
+        "order": 25,
+        "name": "376 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.24947419561705,
+                16.02509095462651
+            ]
+        },
+        "times": [
+            "09:19",
+            "13:26",
+            "17:26"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1626",
+        "order": 26,
+        "name": "542 Lê Văn Hiến",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.2568359969511,
+                16.010316653426422
+            ]
+        },
+        "times": [
+            "09:27",
+            "13:34",
+            "17:34"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1627",
+        "order": 27,
+        "name": "Cây cảnh Ebisu",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.25844975513405,
+                15.994645165512585
+            ]
+        },
+        "times": [
+            "09:35",
+            "13:42",
+            "17:42"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1628",
+        "order": 28,
+        "name": "316 Trần Đại Nghĩa",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.25577961831779,
+                15.982681649644427
+            ]
+        },
+        "times": [
+            "09:44",
+            "13:51",
+            "17:51"
+        ]
+    },
+    {
+        "routeId": {
+            "$oid": "1b8472bd786e16e7c812ceef"
+        },
+        "stopCode": "1629",
+        "order": 29,
+        "name": "Bến xe buýt Đại học Việt Hàn",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                108.25455159522122,
+                15.97655375688303
+            ]
+        },
+        "times": [
+            "09:52",
+            "13:59",
+            "17:59"
+        ]
+    }
+]
