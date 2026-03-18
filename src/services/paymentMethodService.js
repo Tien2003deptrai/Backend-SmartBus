@@ -1,4 +1,4 @@
-const PaymentMethod = require('../models/paymentMethod');
+const PaymentMethod = require('../models/PaymentMethod');
 
 async function createPaymentMethod(userId, data) {
     const paymentMethod = await PaymentMethod.create({
