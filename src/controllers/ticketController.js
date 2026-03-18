@@ -5,7 +5,7 @@ async function createTicket(req, res) {
         const ticket = await ticketService.createTicket(req.user._id, req.body);
         return res.status(201).json({
             success: true,
-            message: 'Tao ve thanh cong',
+            message: 'Tạo vé thành công',
             data: ticket
         });
     } catch (error) {
@@ -30,7 +30,7 @@ async function verifyScannedQr(req, res) {
 
         return res.json({
             success: true,
-            message: result.isValid ? 'QR code hop le' : 'QR code khong hop le',
+            message: result.isValid ? 'QR code hợp lệ' : 'QR code không hợp lệ',
             data: result
         });
     } catch (error) {

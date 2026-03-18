@@ -14,27 +14,27 @@ function generateQrCodeText() {
 
 function getInvalidReason(ticket) {
     if (!ticket) {
-        return 'QR code khong ton tai';
+        return 'QR code không tồn tại';
     }
 
     if (ticket.status === 'cancelled') {
-        return 'Ve da bi huy';
+        return 'Vé đã bị hủy';
     }
 
     if (ticket.status === 'used') {
-        return 'Ve da duoc su dung';
+        return 'Vé đã được sử dụng';
     }
 
     if (ticket.status === 'expired') {
-        return 'Ve da het han';
+        return 'Vé đã hết hạn';
     }
 
     if (ticket.expiryDate && ticket.expiryDate.getTime() < Date.now()) {
-        return 'Ve da het han';
+        return 'Vé đã hết hạn';
     }
 
     if (!VALID_VERIFY_STATUSES.has(ticket.status)) {
-        return `Ve khong hop le voi trang thai ${ticket.status}`;
+        return `Vé không hợp lệ với trạng thái ${ticket.status}`;
     }
 
     return null;
@@ -43,7 +43,7 @@ function getInvalidReason(ticket) {
 async function createTicket(userId, data) {
     const route = await Route.findById(data.routeId).select('_id');
     if (!route) {
-        throw new Error('Tuyen khong ton tai');
+        throw new Error('Tuyến không tồn tại');
     }
 
     const paymentMethod = await PaymentMethod.findOne({
@@ -51,7 +51,7 @@ async function createTicket(userId, data) {
         user: userId
     }).select('_id');
     if (!paymentMethod) {
-        throw new Error('Phuong thuc thanh toan khong ton tai hoac khong thuoc ve ban');
+        throw new Error('Phương thức thanh toán không tồn tại hoặc không thuộc về bạn');
     }
 
     for (let attempt = 0; attempt < 3; attempt++) {
@@ -79,7 +79,7 @@ async function createTicket(userId, data) {
         }
     }
 
-    throw new Error('Khong the tao ve');
+    throw new Error('Không thể tạo vé');
 }
 
 async function verifyScannedQr(scannerUserId, data, context = {}) {
@@ -91,7 +91,7 @@ async function verifyScannedQr(scannerUserId, data, context = {}) {
 
     const invalidReason = getInvalidReason(ticket);
     const isValid = !invalidReason;
-    const reason = invalidReason || 'QR code hop le';
+    const reason = invalidReason || 'QR code hợp lệ';
 
     const scanLog = await ScanLog.create({
         ticket: ticket?._id || null,

@@ -3,39 +3,39 @@
 const ticketTypeValues = ['single', 'monthlySingleRoute', 'monthlyInterRoute'];
 
 const createTicketRules = [
-    body('routeId').isMongoId().withMessage('routeId khong hop le'),
-    body('routeName').trim().notEmpty().withMessage('routeName la bat buoc'),
-    body('startStopName').trim().notEmpty().withMessage('startStopName la bat buoc'),
-    body('endStopName').trim().notEmpty().withMessage('endStopName la bat buoc'),
+    body('routeId').isMongoId().withMessage('routeId không hợp lệ'),
+    body('routeName').trim().notEmpty().withMessage('routeName là bắt buộc'),
+    body('startStopName').trim().notEmpty().withMessage('startStopName là bắt buộc'),
+    body('endStopName').trim().notEmpty().withMessage('endStopName là bắt buộc'),
     body('ticketType')
         .trim()
         .isIn(ticketTypeValues)
-        .withMessage('ticketType phai la single, monthlySingleRoute hoac monthlyInterRoute'),
+        .withMessage('ticketType phải là single, monthlySingleRoute hoặc monthlyInterRoute'),
     body('departureDate')
         .isISO8601()
-        .withMessage('departureDate khong hop le')
+        .withMessage('departureDate không hợp lệ')
         .toDate(),
     body('departureTime')
         .trim()
         .matches(/^([01]\d|2[0-3]):([0-5]\d)$/)
-        .withMessage('departureTime phai theo dinh dang HH:mm'),
+        .withMessage('departureTime phải theo định dạng HH:mm'),
     body('seatQuantity')
         .isInt({ min: 1 })
-        .withMessage('seatQuantity phai >= 1')
+        .withMessage('seatQuantity phải >= 1')
         .toInt(),
-    body('customerName').trim().notEmpty().withMessage('customerName la bat buoc'),
-    body('customerPhone').trim().notEmpty().withMessage('customerPhone la bat buoc'),
-    body('paymentMethodId').isMongoId().withMessage('paymentMethodId khong hop le'),
-    body('price').isFloat({ min: 0 }).withMessage('price phai >= 0').toFloat()
+    body('customerName').trim().notEmpty().withMessage('customerName là bắt buộc'),
+    body('customerPhone').trim().notEmpty().withMessage('customerPhone là bắt buộc'),
+    body('paymentMethodId').isMongoId().withMessage('paymentMethodId không hợp lệ'),
+    body('price').isFloat({ min: 0 }).withMessage('price phải >= 0').toFloat()
 ];
 
 const verifyScannedQrRules = [
     body('qrCode')
         .trim()
         .notEmpty()
-        .withMessage('qrCode la bat buoc')
+        .withMessage('qrCode là bắt buộc')
         .isLength({ min: 5, max: 255 })
-        .withMessage('qrCode khong hop le')
+        .withMessage('qrCode không hợp lệ')
 ];
 
 function validate(req, res, next) {
