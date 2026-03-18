@@ -10,8 +10,7 @@ const ticketSchema = new mongoose.Schema(
         routeId: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Route',
-            required: true,
-            trim: true
+            required: true
         },
         routeName: {
             type: String,
@@ -33,12 +32,10 @@ const ticketSchema = new mongoose.Schema(
             enum: ['single', 'monthlySingleRoute', 'monthlyInterRoute'],
             required: true
         },
-        // ngày đi
         departureDate: {
             type: Date,
             required: true
         },
-        // giờ đi
         departureTime: {
             type: String,
             required: true,
@@ -59,7 +56,6 @@ const ticketSchema = new mongoose.Schema(
             required: true,
             trim: true
         },
-        // object payment_method
         paymentMethodId: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'PaymentMethod',
@@ -70,25 +66,40 @@ const ticketSchema = new mongoose.Schema(
             required: true,
             min: 0
         },
+
         qrCode: {
             type: String,
-            required: true,
+            default: null,
+            unique: true,
+            sparse: true,
             trim: true
         },
+
+        qrCodeImage: {
+            type: String,
+            default: null
+        },
+
         status: {
             type: String,
             enum: ['pending', 'paid', 'active', 'used', 'expired', 'cancelled'],
-            default: 'active'
+            default: 'pending'
         },
+
         purchaseDate: {
             type: Date,
-            default: Date.now
+            default: null
         },
         issueDate: {
             type: Date,
-            default: Date.now
+            default: null
         },
         expiryDate: {
+            type: Date,
+            default: null
+        },
+
+        usedAt: {
             type: Date,
             default: null
         }
