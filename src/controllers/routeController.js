@@ -3,7 +3,7 @@ const routeService = require('../services/routeService');
 async function createRoute(req, res) {
     try {
         const route = await routeService.createRoute(req.user._id, req.body);
-        res.status(201).json({ success: true, route });
+        res.status(201).json({ success: true, data: route });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -12,7 +12,7 @@ async function createRoute(req, res) {
 async function updateRoute(req, res) {
     try {
         const route = await routeService.updateRoute(req.params.id, req.user._id, req.body);
-        res.json({ success: true, route });
+        res.json({ success: true, data: route });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -21,7 +21,7 @@ async function updateRoute(req, res) {
 async function deleteRoute(req, res) {
     try {
         await routeService.deleteRoute(req.params.id, req.user._id);
-        res.json({ success: true, message: 'Đã xóa tuyến' });
+        res.json({ success: true, message: 'Đã xóa tuyến', data: null });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -37,7 +37,7 @@ async function listRoutes(req, res) {
             sort: sort || 'newest',
             userId: userId || req.user?._id,
         });
-        res.json({ success: true, ...result });
+        res.json({ success: true, data: result });
     } catch (err) {
         res.status(500).json({ success: false, message: err.message });
     }
@@ -46,7 +46,7 @@ async function listRoutes(req, res) {
 async function getRouteDetail(req, res) {
     try {
         const route = await routeService.getRouteById(req.params.id);
-        res.json({ success: true, route });
+        res.json({ success: true, data: route });
     } catch (err) {
         res.status(404).json({ success: false, message: err.message });
     }

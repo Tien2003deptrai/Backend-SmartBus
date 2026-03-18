@@ -10,6 +10,7 @@ const reviewRoutes = require('./src/routes/reviewRoutes');
 const adminUserRoutes = require('./src/routes/adminUserRoutes');
 const suggestLocationRoutes = require('./src/routes/suggestLocationRoutes');
 const tripRoutes = require('./src/routes/tripRoutes');
+const paymentMethodRoutes = require('./src/routes/paymentMethodRoutes');
 const app = express();
 
 app.use(express.json());
@@ -25,6 +26,7 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminUserRoutes);
 app.use('/api/suggest-locations', suggestLocationRoutes);
 app.use('/api/trips', tripRoutes);
+app.use('/api/payment-methods', paymentMethodRoutes);
 
 app.get('/health', (req, res) => {
     res.json({ success: true, message: 'OK' });

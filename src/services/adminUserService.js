@@ -20,20 +20,11 @@ async function listUsers({ page = 1, limit = 10, search, role, is_priority_user,
     const skip = (page - 1) * limit;
     const sort = { createdAt: -1 };
 
-    const [users, total] = await Promise.all([
+    const [users] = await Promise.all([
         User.find(query).sort(sort).skip(skip).limit(limit).select('-password'),
-        User.countDocuments(query),
     ]);
 
-    return {
-        users,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return users;
 }
 
 async function updateUserActive(userId, active) {

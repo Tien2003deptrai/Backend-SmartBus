@@ -3,7 +3,7 @@ const routeReportService = require('../services/routeReportService');
 async function createRouteReport(req, res) {
     try {
         const report = await routeReportService.createRouteReport(req.user._id, req.body);
-        res.status(201).json({ success: true, report });
+        res.status(201).json({ success: true, data: report });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -16,7 +16,7 @@ async function updateRouteReport(req, res) {
             req.user._id,
             req.body
         );
-        res.json({ success: true, report });
+        res.json({ success: true, data: report });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -25,7 +25,7 @@ async function updateRouteReport(req, res) {
 async function deleteRouteReport(req, res) {
     try {
         await routeReportService.deleteRouteReport(req.params.id, req.user._id);
-        res.json({ success: true, message: 'Đã xóa báo cáo' });
+        res.json({ success: true, message: 'Đã xóa báo cáo', data: null });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -43,7 +43,7 @@ async function listRouteReports(req, res) {
             status,
             type,
         });
-        res.json({ success: true, ...result });
+        res.json({ success: true, data: result });
     } catch (err) {
         res.status(500).json({ success: false, message: err.message });
     }
@@ -52,7 +52,7 @@ async function listRouteReports(req, res) {
 async function getRouteReportDetail(req, res) {
     try {
         const report = await routeReportService.getRouteReportById(req.params.id);
-        res.json({ success: true, report });
+        res.json({ success: true, data: report });
     } catch (err) {
         res.status(404).json({ success: false, message: err.message });
     }

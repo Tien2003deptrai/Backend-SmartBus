@@ -3,7 +3,7 @@ const reviewService = require('../services/reviewService');
 async function createReview(req, res) {
     try {
         const review = await reviewService.createReview(req.user._id, req.body);
-        res.status(201).json({ success: true, review });
+        res.status(201).json({ success: true, data: review });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -12,7 +12,7 @@ async function createReview(req, res) {
 async function updateReview(req, res) {
     try {
         const review = await reviewService.updateReview(req.params.id, req.user._id, req.body);
-        res.json({ success: true, review });
+        res.json({ success: true, data: review });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -21,7 +21,7 @@ async function updateReview(req, res) {
 async function deleteReview(req, res) {
     try {
         await reviewService.deleteReview(req.params.id, req.user._id);
-        res.json({ success: true, message: 'Đã xóa đánh giá' });
+        res.json({ success: true, message: 'Đã xóa đánh giá', data: null });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -37,7 +37,7 @@ async function listReviews(req, res) {
             sort: sort || 'newest',
             routeId: routeId || undefined,
         });
-        res.json({ success: true, ...result });
+        res.json({ success: true, data: result });
     } catch (err) {
         res.status(500).json({ success: false, message: err.message });
     }
@@ -46,7 +46,7 @@ async function listReviews(req, res) {
 async function getReviewDetail(req, res) {
     try {
         const review = await reviewService.getReviewById(req.params.id);
-        res.json({ success: true, review });
+        res.json({ success: true, data: review });
     } catch (err) {
         res.status(404).json({ success: false, message: err.message });
     }

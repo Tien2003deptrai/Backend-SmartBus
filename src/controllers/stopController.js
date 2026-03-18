@@ -3,7 +3,7 @@ const stopService = require('../services/stopService');
 async function createStop(req, res) {
     try {
         const stop = await stopService.createStop(req.user._id, req.body);
-        res.status(201).json({ success: true, stop });
+        res.status(201).json({ success: true, data: stop });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -12,7 +12,7 @@ async function createStop(req, res) {
 async function updateStop(req, res) {
     try {
         const stop = await stopService.updateStop(req.params.id, req.user._id, req.body);
-        res.json({ success: true, stop });
+        res.json({ success: true, data: stop });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -21,7 +21,7 @@ async function updateStop(req, res) {
 async function deleteStop(req, res) {
     try {
         await stopService.deleteStop(req.params.id, req.user._id);
-        res.json({ success: true, message: 'Đã xóa điểm dừng' });
+        res.json({ success: true, message: 'Đã xóa điểm dừng', data: null });
     } catch (err) {
         res.status(400).json({ success: false, message: err.message });
     }
@@ -35,7 +35,7 @@ async function listStopsByRoute(req, res) {
             page: Number(page) || 1,
             limit: Number(limit) || 100,
         });
-        res.json({ success: true, ...result });
+        res.json({ success: true, data: result });
     } catch (err) {
         res.status(500).json({ success: false, message: err.message });
     }
@@ -44,7 +44,7 @@ async function listStopsByRoute(req, res) {
 async function getStopDetail(req, res) {
     try {
         const stop = await stopService.getStopById(req.params.id);
-        res.json({ success: true, stop });
+        res.json({ success: true, data: stop });
     } catch (err) {
         res.status(404).json({ success: false, message: err.message });
     }

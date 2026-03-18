@@ -42,20 +42,17 @@ async function listRoutes({ page = 1, limit = 10, search, sort = 'newest', userI
     const sortOpt = sort === 'oldest' ? { createdAt: 1 } : { createdAt: -1 };
     const skip = (page - 1) * limit;
 
-    const [routes, total] = [Route.find(query).sort(sortOpt).skip(skip).limit(limit)
-        .populate('userId', 'full_name email')
-        .populate('staffId', 'full_name email'),
-    Route.countDocuments(query)];
+    const [routes] = await Promise.all([
+        Route.find(query)
+            .sort(sortOpt)
+            .skip(skip)
+            .limit(limit)
+            .populate('userId', 'full_name email')
+            .populate('staffId', 'full_name email')
+            .lean(),
+    ]);
 
-    return {
-        routes,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return routes;
 }
 
 async function getRouteById(routeId) {

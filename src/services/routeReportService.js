@@ -41,25 +41,16 @@ async function listRouteReports({
     const sortOpt = sort === 'oldest' ? { createdAt: 1 } : { createdAt: -1 };
     const skip = (page - 1) * limit;
 
-    const [reports, total] = await Promise.all([
+    const [reports] = await Promise.all([
         RouteReport.find(query)
             .sort(sortOpt)
             .skip(skip)
             .limit(limit)
             .populate('userId', 'full_name email')
             .populate('routeId', 'code name startName endName'),
-        RouteReport.countDocuments(query),
     ]);
 
-    return {
-        reports,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return reports;
 }
 
 async function getRouteReportById(reportId) {

@@ -30,25 +30,16 @@ async function listReviews({ page = 1, limit = 10, rating, sort = 'newest', rout
     const sortOpt = sort === 'oldest' ? { createdAt: 1 } : { createdAt: -1 };
     const skip = (page - 1) * limit;
 
-    const [reviews, total] = await Promise.all([
+    const [reviews] = await Promise.all([
         Review.find(query)
             .sort(sortOpt)
             .skip(skip)
             .limit(limit)
             .populate('userId', 'full_name email')
             .populate('routeId', 'code name'),
-        Review.countDocuments(query),
     ]);
 
-    return {
-        reviews,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return reviews;
 }
 
 async function getReviewById(reviewId) {

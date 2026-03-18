@@ -2,7 +2,7 @@ const Post = require('../models/Post');
 
 async function createPost(userId, data) {
     const post = await Post.create({ ...data, user: userId });
-    return post.populate('user', 'full_name email');
+    return post;
 }
 
 async function updatePost(postId, userId, data) {
@@ -11,7 +11,7 @@ async function updatePost(postId, userId, data) {
     const { user, ...allowed } = data;
     Object.assign(post, allowed);
     await post.save();
-    return post.populate('user', 'full_name email');
+    return post;
 }
 
 async function deletePost(postId, userId) {
@@ -30,20 +30,11 @@ async function listPosts({ page = 1, limit = 10, search, sort = 'newest' }) {
     const sortOpt = sort === 'oldest' ? { createdAt: 1 } : { createdAt: -1 };
     const skip = (page - 1) * limit;
 
-    const [posts, total] = await Promise.all([
+    const [posts] = await Promise.all([
         Post.find(query).sort(sortOpt).skip(skip).limit(limit).populate('user', 'full_name email'),
-        Post.countDocuments(query),
     ]);
 
-    return {
-        posts,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return posts;
 }
 
 async function getPostById(postId) {

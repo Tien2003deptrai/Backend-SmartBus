@@ -45,20 +45,11 @@ async function listStopsByRoute({ routeId, page = 1, limit = 100 }) {
     const query = { routeId };
     const skip = (page - 1) * limit;
 
-    const [stops, total] = await Promise.all([
+    const [stops] = await Promise.all([
         Stop.find(query).sort({ order: 1 }).skip(skip).limit(limit).lean(),
-        Stop.countDocuments(query),
     ]);
 
-    return {
-        stops,
-        pagination: {
-            page,
-            limit,
-            total,
-            totalPages: Math.ceil(total / limit),
-        },
-    };
+    return stops;
 }
 
 async function getStopById(stopId) {
