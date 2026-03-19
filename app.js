@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const userRoutes = require('./src/routes/userRoutes');
 const postRoutes = require('./src/routes/postRoutes');
 const uploadRoutes = require('./src/routes/uploadRoutes');
@@ -18,6 +19,9 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
+
+// CORS middleware cho cả 3000 và 5173
+app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:5173'] }));
 
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
