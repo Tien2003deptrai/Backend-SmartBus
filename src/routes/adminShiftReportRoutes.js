@@ -5,20 +5,18 @@ const shiftReportController = require('../controllers/shiftReportController');
 const shiftReportValidation = require('../validations/shiftReportValidation');
 
 const router = express.Router();
+router.use(auth);
+router.use(requireAdmin);
 
-router.get(
+router.post(
     '/',
-    auth,
-    requireAdmin,
-    shiftReportValidation.adminListQueryRules,
+    shiftReportValidation.adminListBodyRules,
     shiftReportValidation.validate,
     shiftReportController.getAdminShiftReports
 );
 
 router.patch(
     '/:reportId/review',
-    auth,
-    requireAdmin,
     shiftReportValidation.reviewRules,
     shiftReportValidation.validate,
     shiftReportController.reviewShiftReport

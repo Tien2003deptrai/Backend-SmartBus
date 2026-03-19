@@ -54,8 +54,15 @@ Kỳ vọng `201`:
 
 ## 3) Staff xem danh sách báo cáo của mình
 ```http
-GET {{baseUrl}}/api/shift-reports/my?page=1&limit=10&status=submitted
+POST {{baseUrl}}/api/shift-reports/my
 Authorization: Bearer {{staffToken}}
+Content-Type: application/json
+
+{
+  "page": 1,
+  "limit": 10,
+  "status": "submitted"
+}
 ```
 
 Kỳ vọng `200`:
@@ -66,8 +73,16 @@ Kỳ vọng `200`:
 
 ## 4) Admin xem danh sách báo cáo ca
 ```http
-GET {{baseUrl}}/api/admin/shift-reports?page=1&limit=20&status=submitted&staffId={{staffId}}
+POST {{baseUrl}}/api/admin/shift-reports
 Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "page": 1,
+  "limit": 20,
+  "status": "submitted",
+  "staffId": "{{staffId}}"
+}
 ```
 
 Kỳ vọng `200`:
@@ -129,8 +144,14 @@ Kỳ vọng `400` với message `shiftStartAt phải nhỏ hơn shiftEndAt`.
 
 ### 7.2 Staff gọi API admin
 ```http
-GET {{baseUrl}}/api/admin/shift-reports?page=1&limit=20
+POST {{baseUrl}}/api/admin/shift-reports
 Authorization: Bearer {{staffToken}}
+Content-Type: application/json
+
+{
+  "page": 1,
+  "limit": 20
+}
 ```
 Kỳ vọng `403`.
 

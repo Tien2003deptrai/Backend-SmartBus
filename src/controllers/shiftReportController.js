@@ -33,7 +33,7 @@ async function submitShiftReport(req, res) {
 
 async function getMyShiftReports(req, res) {
     try {
-        const result = await shiftReportService.getMyShiftReports(req.user._id, req.query);
+        const result = await shiftReportService.getMyShiftReports(req.user._id, req.body);
         return res.json({
             success: true,
             data: result
@@ -48,7 +48,7 @@ async function getMyShiftReports(req, res) {
 
 async function getAdminShiftReports(req, res) {
     try {
-        const result = await shiftReportService.getAdminShiftReports(req.query);
+        const result = await shiftReportService.getAdminShiftReports(req.body);
         return res.json({
             success: true,
             data: result

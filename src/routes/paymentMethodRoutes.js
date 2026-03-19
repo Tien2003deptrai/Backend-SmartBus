@@ -3,10 +3,10 @@ const router = express.Router();
 const paymentMethodController = require('../controllers/paymentMethodController');
 const paymentMethodValidation = require('../validations/paymentMethodValidation');
 const auth = require('../middlewares/auth');
+router.use(auth);
 
 router.post(
     '/create',
-    auth,
     paymentMethodValidation.createPaymentMethodRules,
     paymentMethodValidation.validate,
     paymentMethodController.createPaymentMethod
@@ -14,7 +14,6 @@ router.post(
 
 router.put(
     '/update/:id',
-    auth,
     paymentMethodValidation.idParamRule,
     paymentMethodValidation.updatePaymentMethodRules,
     paymentMethodValidation.validate,
@@ -23,7 +22,6 @@ router.put(
 
 router.get(
     '/my-payment-methods',
-    auth,
     paymentMethodController.getMyPaymentMethods
 );
 

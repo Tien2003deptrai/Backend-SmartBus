@@ -22,9 +22,9 @@ router.post(
     shiftReportController.submitShiftReport
 );
 
-router.get(
+router.post(
     '/my',
-    shiftReportValidation.myReportQueryRules,
+    shiftReportValidation.myReportBodyRules,
     shiftReportValidation.validate,
     shiftReportController.getMyShiftReports
 );

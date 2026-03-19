@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require('../middlewares/auth');
 const { uploadMax5Images } = require('../middlewares/upload');
 const uploadController = require('../controllers/uploadController');
+router.use(auth);
 
 const uploadMiddleware = (req, res, next) => {
     uploadMax5Images(req, res, (err) => {
@@ -15,7 +16,6 @@ const uploadMiddleware = (req, res, next) => {
 
 router.post(
     '/images',
-    auth,
     uploadMiddleware,
     uploadController.uploadImages
 );

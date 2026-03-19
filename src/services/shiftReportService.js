@@ -2,7 +2,6 @@
 const ScanLog = require('../models/ScanLog');
 const Ticket = require('../models/Ticket');
 
-const REVIEWABLE_STATUSES = new Set(['submitted']);
 const ADMIN_REVIEW_STATUSES = new Set(['approved', 'rejected']);
 const MAX_SHIFT_DURATION_MS = 24 * 60 * 60 * 1000;
 
@@ -126,14 +125,14 @@ async function submitShiftReport(staffId, payload) {
     return report;
 }
 
-async function getMyShiftReports(staffId, query = {}) {
-    const page = Math.max(Number(query.page) || 1, 1);
-    const limit = Math.min(Math.max(Number(query.limit) || 10, 1), 100);
+async function getMyShiftReports(staffId, payload = {}) {
+    const page = Math.max(Number(payload.page) || 1, 1);
+    const limit = Math.min(Math.max(Number(payload.limit) || 10, 1), 100);
     const skip = (page - 1) * limit;
 
     const filter = { staffId };
-    if (query.status && ['submitted', 'approved', 'rejected'].includes(query.status)) {
-        filter.status = query.status;
+    if (payload.status && ['submitted', 'approved', 'rejected'].includes(payload.status)) {
+        filter.status = payload.status;
     }
 
     const [items, total] = await Promise.all([
@@ -147,17 +146,17 @@ async function getMyShiftReports(staffId, query = {}) {
     return { items, page, limit, total };
 }
 
-async function getAdminShiftReports(query = {}) {
-    const page = Math.max(Number(query.page) || 1, 1);
-    const limit = Math.min(Math.max(Number(query.limit) || 20, 1), 100);
+async function getAdminShiftReports(payload = {}) {
+    const page = Math.max(Number(payload.page) || 1, 1);
+    const limit = Math.min(Math.max(Number(payload.limit) || 20, 1), 100);
     const skip = (page - 1) * limit;
 
     const filter = {};
-    if (query.status && ['submitted', 'approved', 'rejected'].includes(query.status)) {
-        filter.status = query.status;
+    if (payload.status && ['submitted', 'approved', 'rejected'].includes(payload.status)) {
+        filter.status = payload.status;
     }
-    if (query.staffId) {
-        filter.staffId = query.staffId;
+    if (payload.staffId) {
+        filter.staffId = payload.staffId;
     }
 
     const [items, total] = await Promise.all([
@@ -182,10 +181,6 @@ async function reviewShiftReport(reportId, adminId, payload) {
     const report = await ShiftReport.findById(reportId);
     if (!report) {
         throw new Error('Báo cáo ca không tồn tại');
-    }
-
-    if (!REVIEWABLE_STATUSES.has(report.status)) {
-        throw new Error('Báo cáo ca đã được xử lý trước đó');
     }
 
     report.status = nextStatus;
