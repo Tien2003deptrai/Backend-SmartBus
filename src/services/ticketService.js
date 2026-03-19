@@ -6,7 +6,7 @@ const Route = require('../models/Route');
 const PaymentMethod = require('../models/PaymentMethod');
 const ScanLog = require('../models/ScanLog');
 
-const VALID_VERIFY_STATUSES = new Set(['paid', 'active']);
+const VALID_VERIFY_STATUSES = new Set(['pending', 'paid', 'active']);
 
 function generateQrCodeText() {
     return `TICKET-${crypto.randomUUID()}`;
@@ -40,6 +40,32 @@ function getInvalidReason(ticket) {
     return null;
 }
 
+function addMonthsPreserveDay(date, months) {
+    const result = new Date(date.getTime());
+    const day = result.getDate();
+
+    result.setMonth(result.getMonth() + months);
+    if (result.getDate() < day) {
+        result.setDate(0);
+    }
+
+    return result;
+}
+
+function buildTicketDates(ticketType) {
+    const issueDate = new Date();
+    let expiryDate = null;
+
+    if (ticketType === 'single') {
+        expiryDate = new Date(issueDate.getTime());
+        expiryDate.setDate(expiryDate.getDate() + 1);
+    } else if (ticketType === 'monthlySingleRoute' || ticketType === 'monthlyInterRoute') {
+        expiryDate = addMonthsPreserveDay(issueDate, 1);
+    }
+
+    return { issueDate, expiryDate };
+}
+
 async function createTicket(userId, data) {
     const route = await Route.findById(data.routeId).select('_id');
     if (!route) {
@@ -54,6 +80,23 @@ async function createTicket(userId, data) {
         throw new Error('Phương thức thanh toán không tồn tại hoặc không thuộc về bạn');
     }
 
+    const {
+        routeId,
+        routeName,
+        startStopName,
+        endStopName,
+        ticketType,
+        departureDate,
+        departureTime,
+        seatQuantity,
+        customerName,
+        customerPhone,
+        paymentMethodId,
+        price
+    } = data;
+
+    const { issueDate, expiryDate } = buildTicketDates(ticketType);
+
     for (let attempt = 0; attempt < 3; attempt++) {
         const qrCode = generateQrCodeText();
         const qrCodeImage = await QRCode.toDataURL(qrCode, {
@@ -65,8 +108,21 @@ async function createTicket(userId, data) {
 
         try {
             const ticket = await Ticket.create({
-                ...data,
+                routeId,
+                routeName,
+                startStopName,
+                endStopName,
+                ticketType,
+                departureDate,
+                departureTime,
+                seatQuantity,
+                customerName,
+                customerPhone,
+                paymentMethodId,
+                price,
                 user: userId,
+                issueDate,
+                expiryDate,
                 qrCode,
                 qrCodeImage
             });
@@ -82,7 +138,7 @@ async function createTicket(userId, data) {
     throw new Error('Không thể tạo vé');
 }
 
-async function verifyScannedQr(scannerUserId, data, context = {}) {
+async function verifyScannedQr(scannerUserId, data) {
     const qrCode = String(data.qrCode || '').trim();
 
     const ticket = await Ticket.findOne({ qrCode }).select(
@@ -98,9 +154,7 @@ async function verifyScannedQr(scannerUserId, data, context = {}) {
         qrCode,
         isValid,
         reason,
-        scannedBy: scannerUserId || null,
-        sourceIp: context.sourceIp || '',
-        userAgent: context.userAgent || ''
+        scannedBy: scannerUserId || null
     });
 
     return {

@@ -18,15 +18,7 @@ async function createTicket(req, res) {
 
 async function verifyScannedQr(req, res) {
     try {
-        const xForwardedFor = req.headers['x-forwarded-for'];
-        const sourceIp = Array.isArray(xForwardedFor)
-            ? xForwardedFor[0]
-            : (xForwardedFor || req.ip || '').toString().split(',')[0].trim();
-
-        const result = await ticketService.verifyScannedQr(req.user?._id, req.body, {
-            sourceIp,
-            userAgent: req.get('user-agent') || ''
-        });
+        const result = await ticketService.verifyScannedQr(req.user?._id, req.body);
 
         return res.json({
             success: true,
