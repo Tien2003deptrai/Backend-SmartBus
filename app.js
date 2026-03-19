@@ -12,6 +12,8 @@ const suggestLocationRoutes = require('./src/routes/suggestLocationRoutes');
 const tripRoutes = require('./src/routes/tripRoutes');
 const paymentMethodRoutes = require('./src/routes/paymentMethodRoutes');
 const ticketRoutes = require('./src/routes/ticketRoutes');
+const shiftReportRoutes = require('./src/routes/shiftReportRoutes');
+const adminShiftReportRoutes = require('./src/routes/adminShiftReportRoutes');
 const app = express();
 
 app.use(express.json());
@@ -29,6 +31,8 @@ app.use('/api/suggest-locations', suggestLocationRoutes);
 app.use('/api/trips', tripRoutes);
 app.use('/api/payment-methods', paymentMethodRoutes);
 app.use('/api/tickets', ticketRoutes);
+app.use('/api/shift-reports', shiftReportRoutes);
+app.use('/api/admin/shift-reports', adminShiftReportRoutes);
 
 app.get('/health', (req, res) => {
     res.json({ success: true, message: 'OK' });
