@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 // CORS middleware cho cả 3000 và 5173
 app.use(
     cors({
-        origin: ['http://localhost:5173', 'http://localhost:3000'],
+        origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:8081'],
         credentials: true,
     })
 );
